@@ -1,0 +1,254 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-top: 50px; /* Adjust space to avoid header overlap */
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #ffa500;
+}
+
+/* Main content */
+main {
+    padding: 40px 20px;
+    margin-top: 100px; /* Ensure content doesn't get hidden behind the fixed header */
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+/* Blog Listing Page (blogs.php) */
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-item {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-item .blog-preview {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.blog-item .read-more {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.blog-item .read-more:hover {
+    color: #0056b3;
+}
+
+/* Individual Blog Post Page */
+article {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+article h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+article p, article h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+article h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Form Styling */
+form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Links Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Header and Footer Text */
+header h1, footer p {
+    font-size: 1.5rem;
+}
+
+/* Blog Item in Grid */
+.blog-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* General Container for Responsiveness */
+.container {
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .blog-list {
+        padding: 10px;
+    }
+
+    .blog-item {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header nav ul li {
+        margin: 0 5px;
+    }
+
+    header nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .blog-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .blog-item .blog-preview {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
